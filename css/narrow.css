@@ -1,0 +1,107 @@
+/* Loaded with media="(max-width: 760px)" from every page: phones. One column, the label above the content,
+   the phone menu, and a full-screen lightbox. */
+.wrap, .show-hero-wrap { width: min(100% - 2.25rem, var(--wrap)); }
+.show-hero-wrap .wrap { width: auto; }
+.site-header { position: static; }
+html { scroll-padding-top: 0; }
+.docbar-who { display: none; }
+
+/* Phone menu: one line of header, the links in a ruled panel under it (show.js adds .has-menu) */
+.site-header.has-menu { position: relative; }
+.site-header.has-menu .wrap { flex-wrap: nowrap; padding: .4rem 0; column-gap: .5rem; }
+.has-menu .menu-toggle { display: inline-flex; }
+.has-menu .site-nav { display: none; }
+.has-menu.menu-open .site-nav { display: block; position: absolute; left: 0; right: 0; top: 100%; z-index: 30; background: var(--paper); border-bottom: 1px solid var(--ink); padding: 0 1.125rem .4rem; }
+.has-menu.menu-open .site-nav ul { flex-direction: column; gap: 0; }
+.has-menu.menu-open .site-nav li + li { border-top: 1px solid var(--grid); }
+.has-menu.menu-open .site-nav a { display: flex; justify-content: flex-start; min-height: 48px; padding: 0; font-size: 1rem; }
+
+/* Home */
+.row-grid { padding: 1.2rem 0 1.4rem; }
+.row-label, h2.row-label { margin-bottom: .35rem; }
+.show-intro .row-grid { padding: .8rem 0 1.3rem; }
+.show-intro h1 { font-size: clamp(1.75rem, 1rem + 4.2vw, 2.4rem); letter-spacing: -.025em; margin-bottom: .8rem; }
+.intro-cols { gap: .8rem; }
+.intro-lede { font-size: 1rem; line-height: 1.5; }
+.intro-ai-short { font-size: .9375rem; line-height: 1.5; padding-top: .45rem; }
+.intro-ai-short strong { display: inline; margin-right: .3rem; }
+.stage-panel .row-grid { padding-top: 1rem; }
+.stage-title { font-size: clamp(1.45rem, 1rem + 2.6vw, 1.9rem); margin-bottom: .45rem; }
+.stage-line { font-size: 1rem; line-height: 1.5; margin-bottom: 1rem; }
+.stage-stats strong { font-size: 1.5rem; }
+.stage-stats li > span { font-size: .8125rem; }
+.stage-new { max-width: none; }
+.band { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.band li:nth-child(3) { border-left: 0; }
+.band li:nth-child(3) a { padding-left: 0; }
+.band li:nth-child(n+3) { border-top: 1px solid var(--grid); }
+.band strong { font-size: 1.75rem; }
+.band-label { font-size: .875rem; }
+.bento { grid-template-columns: minmax(0, 1fr); }
+.pcard { padding: 1rem 0 1.3rem; }
+.pcard-title { font-size: 1.2rem; }
+
+/* Shared page heads */
+.page-top .project-head { padding: 1.4rem 0 1.2rem; }
+.page-top .lede { font-size: 1.05rem; }
+
+/* Project pages */
+.show-title h1 { font-size: clamp(1.7rem, 1rem + 4vw, 2.2rem); } /* long titles stay within three lines at 375 */
+.show-title .lede { font-size: 1.05rem; }
+.typo-hero-quote { font-size: 1.9rem; }
+.typo-hero-big .display { font-size: 4.2rem; }
+.typo-hero.solo .typo-hero-big .display { font-size: 5rem; }
+.result-first { margin-top: 1.6rem; }
+.result-first ul, .glance ul.n-2, .glance ul.n-3 { grid-template-columns: minmax(0, 1fr); }
+.result-first li { display: flex; align-items: baseline; gap: .8rem; padding: .55rem 0; border-bottom: 1px solid var(--grid); }
+.result-first li + li { border-left: 0; padding-left: 0; }
+.result-first strong { flex: none; min-width: 4.6rem; font-size: 2rem; }
+.result-first li > span { margin-top: 0; }
+.result-outcome, .beat-text p { font-size: 1.05rem; }
+.beat { grid-template-columns: minmax(0, 1fr); gap: 1.2rem; margin: 1.8rem 0; padding-top: 1.2rem; }
+.beat.flip .beat-text { order: 0; }
+.calls, .more-images, .ai-strip { margin: 1.8rem 0; padding-top: 1.2rem; }
+.ai-strip { margin-bottom: 0; }
+.thumbs { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
+.production-notes > summary .display { font-size: 1.3rem; }
+.cad-points, .cad-shots { grid-template-columns: minmax(0, 1fr); }
+.typo-panel .display { font-size: 2.4rem; }
+.bento-gallery { grid-template-columns: minmax(0, 1fr); }
+.bento-gallery > li, .bento-gallery > .g-lead, .bento-gallery.n-1 > li { grid-column: 1 / -1; grid-row: auto; }
+.bento-gallery > .g-lead a.shot { aspect-ratio: 16 / 10; height: auto; min-height: 0; }
+.next-prev { grid-template-columns: minmax(0, 1fr); }
+.next-prev .next { text-align: left; padding-left: 0; border-left: 0; border-top: 1px solid var(--grid); }
+
+/* Phone lightbox: the bar on one row, the image fills the rest of the height, no "Open full size" */
+dialog.lightbox { width: 100vw; max-width: 100vw; max-height: 100vh; margin: 0; border: 0; }
+dialog.lightbox[open] { display: flex; flex-direction: column; height: 100vh; height: 100dvh; overflow: hidden; }
+.lb-bar { flex: none; flex-wrap: nowrap; padding: .3rem .5rem; gap: .3rem; }
+.lb-count { white-space: nowrap; }
+.lb-buttons { flex-wrap: nowrap; gap: .3rem; }
+.lb-buttons button { padding: 0 .7rem; font-size: .8125rem; }
+.lb-buttons a { display: none; }
+.lb-figure { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; margin: 0; padding: 0; }
+.lb-figure img { flex: 1 1 auto; min-height: 0; width: 100%; height: 100%; max-width: none; object-fit: contain; }
+.lb-figure figcaption { flex: none; max-height: 30vh; overflow: auto; margin: 0; padding: .5rem .8rem .7rem; font-size: .9rem; }
+
+/* About on phones: compact ruled rows (the page stays within its 3,800 px budget at 375 x 812) */
+.page-about .page-top .lede { font-size: 1rem; }
+.about-sec { padding: 1rem 0 1.2rem; }
+.about-sec h2 { font-size: 1.45rem; }
+.about-intro { font-size: .95rem; line-height: 1.5; margin-bottom: .7rem; }
+.cue-run li { grid-template-columns: 1.4rem minmax(0, 1fr); column-gap: .3rem; padding: .5rem 0; }
+.cue-q { line-height: 1.45; }
+.cue-run h3, .habit-cards h3 { font-size: 1rem; line-height: 1.4; }
+.cue-run p, .habit-cards p, .made-log li { font-size: .9375rem; line-height: 1.45; }
+.made-log li { padding: .5rem 0 .5rem 1.6rem; }
+.made-log li::before { top: .5rem; line-height: 1.45rem; }
+.habit-cards li { padding: .6rem 0; }
+.habit-cards h3 { margin-bottom: .15rem; }
+.habit-cards .see-it { font-size: .875rem; margin-top: .3rem; }
+.vet-list { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; grid-auto-flow: row; }
+.vet-list li { padding: .35rem 0 .35rem 1.6rem; line-height: 1.4rem; font-size: .9375rem; }
+.vet-list li::before { top: .35rem; line-height: 1.4rem; }
+.vet-example { margin-top: .8rem; font-size: .9375rem; line-height: 1.45; }
+
+/* Footer */
+.site-footer { margin-top: 2.4rem; padding: 1.2rem 0 1.6rem; }

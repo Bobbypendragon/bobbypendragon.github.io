@@ -1,0 +1,4 @@
+/* Loaded with media="(prefers-reduced-motion: no-preference)" from every page, so visitors who ask for
+   reduced motion never opt in. Browsers without cross-document View Transitions just change pages. */
+@view-transition { navigation: auto; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: 200ms; }

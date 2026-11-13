@@ -1,0 +1,259 @@
+/* The D1 "run sheet" layer (Nov 13, UX plan stage 2): the home page, project pages, About and work.html.
+   Layered on css/site.css. No at-rules here: media rules live in show-*.css, desk.css and the other files
+   linked with media attributes. Radius is 0 everywhere except the round status dot and the ticket's own shape. */
+
+/* ---------- The document bar (home only): a run sheet's title line, between two 1 px rules */
+.docbar-inner { display: flex; justify-content: space-between; align-items: baseline; gap: .5rem 1.5rem; padding: .4rem 0; border-bottom: 1px solid var(--ink); font: 500 .8125rem/1.4 var(--mono); color: var(--ink-2); }
+.docbar-who { flex: 1 1 auto; }
+.docbar-rev { white-space: nowrap; }
+
+/* ---------- Ruled rows with a left label column (home and About; the column itself is in desk.css) */
+.row-grid { padding: 1.8rem 0 2rem; border-bottom: 1px solid var(--grid); }
+.row-body { min-width: 0; }
+h2.row-label { font: 500 .8125rem/1.4 var(--mono); letter-spacing: 0; color: var(--mute); margin: 0 0 .6rem; }
+
+/* ---------- Home: house open */
+.show-intro .row-grid { padding: 1.3rem 0 1.7rem; }
+.show-intro h1 { font-size: clamp(2.1rem, 1.1rem + 3.3vw, 3.5rem); line-height: 1.08; letter-spacing: -.03em; max-width: 19ch; margin: 0 0 1rem; }
+/* The gold highlighter: a slightly skewed marker stroke behind the lower two-thirds of the phrase. The text stays
+   ink. The home H1 only (forced.css and print.css turn it into a plain underline). */
+.mark {
+  background: linear-gradient(177deg, transparent 0 41%, var(--gold) 43% 89%, transparent 91%);
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+  padding: 0 .1em; margin: 0 -.05em;
+}
+.intro-cols { display: grid; gap: 1rem 3rem; }
+.intro-lede { font-size: 1.125rem; line-height: 1.55; max-width: 40rem; margin: 0; color: var(--ink); }
+.intro-ai-short { margin: 0; color: var(--ink-2); border-top: 1px solid var(--ink); padding-top: .55rem; align-self: start; max-width: 32rem; }
+.intro-ai-short strong { display: block; font: 600 .8125rem/1.5 var(--mono); color: var(--ink); }
+
+/* ---------- Home: the featured project, a ruled row on white */
+.stage-inner { display: grid; gap: 1.6rem; align-items: start; }
+.stage-status { margin: 0 0 .35rem; }
+.stage-title { font-size: clamp(1.6rem, 1.15rem + 1.5vw, 2.25rem); margin: 0 0 .6rem; }
+.stage-line { font-size: 1.0625rem; line-height: 1.55; color: var(--ink-2); max-width: 34rem; margin: 0 0 1rem; }
+.stage-stats { list-style: none; padding: 0; margin: 0 0 1.2rem; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 34rem; border-top: 1px solid var(--ink); }
+.stage-stats li { margin: 0; padding: .6rem .8rem 0 0; }
+.stage-stats strong { display: block; font-size: clamp(1.5rem, 1.2rem + 1vw, 1.9rem); line-height: 1.1; white-space: nowrap; }
+.stage-stats li > span { display: block; font-size: .875rem; line-height: 1.4; color: var(--ink-2); margin-top: .25rem; }
+.stage-cta { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem 1.4rem; }
+.stage-new { margin: 0; color: var(--ink-2); font-size: .9375rem; line-height: 1.45; max-width: 22rem; }
+.stage-new .mono { font-weight: 600; font-size: .8125rem; color: var(--ink); margin-right: .35rem; }
+.stage-media { margin: 0; border: 1px solid var(--ink); background: var(--paper); }
+.stage-media video { width: 100%; height: auto; aspect-ratio: 16 / 10; background: var(--paper); }
+.stage-media figcaption { margin: 0; padding: .5rem .75rem .55rem; border-top: 1px solid var(--ink); }
+
+/* ---------- Home: four plain numbers, each linking to its project */
+.stat-band .row-grid { padding: 1.4rem 0 1.6rem; }
+.band { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--ink); }
+.band li { margin: 0; }
+.band li + li { border-left: 1px solid var(--grid); }
+.band a { display: block; height: 100%; min-height: 44px; padding: .7rem 1rem .3rem; color: var(--ink); text-decoration: none; }
+.band li:first-child a { padding-left: 0; }
+.band a:hover .band-label { text-decoration: underline; text-underline-offset: .2em; }
+.band strong { display: block; font-size: clamp(1.75rem, 1.3rem + 1.4vw, 2.5rem); line-height: 1.1; }
+.band-label { display: block; font-size: .9375rem; line-height: 1.4; color: var(--ink-2); margin-top: .3rem; }
+
+/* ---------- Home: selected work. Picture above, status, title and one line below; rules between items. */
+.bento { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2rem; }
+.pcard { margin: 0; padding: 1.2rem 0 1.6rem; border-top: 1px solid var(--ink); }
+.pcard-link { display: block; color: var(--ink); text-decoration: none; }
+.pcard-link:focus-visible { outline-offset: 4px; }
+.pcard-media { display: block; aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid var(--ink); background: var(--paper); }
+.pcard-media img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.pcard-body { display: flex; flex-direction: column; align-items: flex-start; gap: .25rem; padding-top: .8rem; }
+.pcard-title { font: 700 1.3rem/1.25 var(--head); letter-spacing: -.015em; }
+.pcard-link:hover .pcard-title { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .18em; }
+.pcard-result { color: var(--ink-2); font-size: 1rem; line-height: 1.45; }
+/* Text-only projects: the number or line set in type on ruled paper */
+.pcard-media.typo { display: flex; flex-direction: column; justify-content: flex-end; gap: .4rem; padding: 1.1rem 1.2rem 1.2rem; background: repeating-linear-gradient(180deg, transparent 0 31px, var(--grid) 31px 32px), var(--paper); }
+.typo-big { font: 600 clamp(3.5rem, 2.4rem + 3.4vw, 5.5rem)/1 var(--mono); letter-spacing: -.04em; color: var(--ink); }
+.typo-small { color: var(--ink-2); font-size: .95rem; max-width: 22rem; }
+.typo-quote { font: 700 clamp(1.5rem, 1.1rem + 1.3vw, 2.15rem)/1.15 var(--head); letter-spacing: -.025em; color: var(--ink); max-width: 17ch; background: var(--paper); }
+/* A flow as run-sheet rows: each step is a ruled line with its number, filling the frame top to bottom */
+.pcard-media.typo.steps { justify-content: stretch; gap: 0; padding: .4rem 1.2rem; background: var(--paper); }
+.typo-step { flex: 1; display: flex; align-items: center; gap: 1rem; border-top: 1px solid var(--grid); font: 700 clamp(1.3rem, 1rem + 1vw, 1.75rem)/1.1 var(--head); letter-spacing: -.02em; color: var(--ink); }
+.typo-step:first-child { border-top: 0; }
+.typo-step-n { min-width: 2ch; font: 600 .95rem/1 var(--mono); color: var(--mute); }
+
+/* ---------- Project pages: title, lede, one meta line, the hero in a 1 px ink frame */
+.show-head .crumbs { margin: .5rem 0 0; font: 500 .8125rem/1.4 var(--mono); color: var(--mute); }
+.crumbs ol { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0 .45rem; }
+.crumbs li { margin: 0; display: flex; align-items: center; }
+.crumbs li + li::before { content: "/" / ""; margin-right: .45rem; color: var(--mute); }
+.crumbs a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; color: var(--ink); }
+.crumbs [aria-current] { color: var(--ink-2); }
+.show-title { padding: .1rem 0 1.3rem; }
+.show-title h1 { font-size: clamp(2rem, 1.3rem + 2.4vw, 3.25rem); margin: 0 0 .5rem; max-width: 24ch; }
+.show-title .lede { margin: 0 0 .7rem; }
+.meta-line { display: flex; flex-wrap: wrap; align-items: center; gap: .2rem .5rem; margin: 0; font: 500 .8125rem/1.5 var(--mono); color: var(--ink-2); }
+.meta-line .sep { color: var(--mute); }
+.show-hero-wrap { width: min(100% - 2.5rem, var(--wrap)); margin-inline: auto; }
+.show-hero-wrap .wrap { width: auto; }
+.show-hero { margin: 0; }
+.show-hero > a, .show-hero > img { display: block; border: 1px solid var(--ink); }
+.show-hero picture { display: block; }
+.show-hero img { width: 100%; max-height: 72vh; object-fit: cover; object-position: top center; }
+.show-hero figcaption { max-width: 60rem; }
+.show-hero.framed > a { max-width: 960px; }
+.show-hero.framed img { max-height: none; height: auto; object-fit: contain; }
+.show-hero.framed figcaption { max-width: 960px; }
+.show-hero.framed.montage > img { max-width: min(100%, 1100px); }
+.show-hero.framed.montage figcaption { max-width: 1100px; }
+/* Text-only projects: a typographic hero between two rules (its diagram joins it from 1024 px, desk.css) */
+.typo-hero { padding: 1.4rem 0 1.6rem; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.typo-hero-inner { display: grid; gap: 1.6rem; }
+.typo-hero-quote { font: 700 clamp(1.9rem, 1.2rem + 2.6vw, 3.25rem)/1.1 var(--head); letter-spacing: -.03em; color: var(--ink); margin: 0; max-width: 20ch; }
+.typo-hero-big { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem 1rem; font: 600 1.25rem/1.35 var(--head); color: var(--ink-2); }
+.typo-hero-big .display { font: 600 clamp(4rem, 2.4rem + 6vw, 8rem)/.95 var(--mono); letter-spacing: -.04em; color: var(--ink); }
+.typo-hero.solo .typo-hero-big .display { font-size: clamp(5rem, 3rem + 8vw, 10rem); }
+.typo-hero-diagram { display: none; }
+.typo-hero-diagram svg { display: block; width: auto; max-width: 100%; height: auto; }
+
+/* Result first: at most three numbers in mono, then one outcome sentence */
+.result-first { margin: 2.2rem 0 1rem; }
+.result-first h2 { margin: 0 0 .8rem; }
+.glance ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--ink); }
+.glance ul.n-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.glance ul.n-1 { grid-template-columns: minmax(0, 1fr); }
+.glance li { margin: 0; padding: .7rem 1rem .1rem 0; }
+.glance li + li { border-left: 1px solid var(--grid); padding-left: 1rem; }
+.glance strong { display: block; font-size: clamp(2rem, 1.5rem + 1.6vw, 3rem); line-height: 1.05; font-family: var(--mono); font-weight: 600; letter-spacing: -.02em; }
+.glance li > span { display: block; color: var(--ink-2); margin-top: .3rem; font-size: .95rem; line-height: 1.4; }
+.result-outcome { font-size: 1.15rem; max-width: 46rem; margin: 1rem 0 0; }
+.result-demo { color: var(--ink-2); max-width: 46rem; margin: .4rem 0 0; }
+.result-first h3 { font-size: 1.05rem; margin: 1.2rem 0 .4rem; }
+.issue-list { margin: 0; padding-left: 1.4rem; columns: 2 18rem; column-gap: 2rem; max-width: 52rem; }
+.issue-list li { margin: 0 0 .3rem; break-inside: avoid; }
+
+/* The problem, what I built: ruled rows */
+.beat { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 2.4rem; align-items: start; margin: 2.2rem 0; padding-top: 1.6rem; border-top: 1px solid var(--grid); }
+.beat.flip .beat-text { order: 2; }
+.beat.solo { grid-template-columns: minmax(0, 1fr); }
+.beat h2 { margin: 0 0 .7rem; }
+.beat-text p { font-size: 1.0625rem; max-width: 40rem; }
+.beat-text p + p { margin-top: .8rem; }
+.beat-media { margin: 0; }
+.beat-media img { width: 100%; max-height: 640px; object-fit: contain; border: 1px solid var(--ink); background: var(--paper); }
+.beat-video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; border: 1px solid var(--ink); background: var(--paper); }
+.beat .diagram { margin: 0; }
+.beat-diagram .diagram { margin: 0; }
+
+/* Calls I made: ruled one-liners */
+.calls { margin: 2.2rem 0; padding-top: 1.6rem; border-top: 1px solid var(--grid); }
+.calls h2 { margin: 0 0 .8rem; }
+.calls-list { list-style: none; padding: 0; margin: 0; max-width: 50rem; border-top: 1px solid var(--ink); }
+.calls-list li { margin: 0; padding: .75rem 0; border-bottom: 1px solid var(--grid); }
+
+/* More images: three framed thumbnails and "See all (n)" */
+.more-images { margin: 2.2rem 0; padding-top: 1.6rem; border-top: 1px solid var(--grid); }
+.more-images h2 { margin: 0 0 .6rem; }
+.more-images > p { max-width: 46rem; color: var(--ink-2); }
+.thumbs { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.thumbs li { margin: 0; }
+.thumbs a.shot { display: block; aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid var(--ink); background: var(--paper); }
+.thumbs a.shot img { width: 100%; height: 100%; object-fit: cover; object-position: left top; }
+.see-all-row { margin: 1rem 0 0; }
+
+/* Full details: the summary is a ruled row, 2 px ink above */
+.production-notes { margin: 2.4rem 0 2rem; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.production-notes > summary { cursor: pointer; list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: .3rem 1rem; padding: 1rem 0; min-height: 48px; }
+.production-notes > summary::-webkit-details-marker { display: none; }
+.production-notes > summary::after { content: "Open" / ""; margin-left: auto; padding: .35rem .7rem; border: 2px solid var(--ink); font: 600 .8125rem/1.2 var(--mono); color: var(--ink); }
+.production-notes[open] > summary::after { content: "Close" / ""; }
+.production-notes > summary .display { font: 700 1.5rem/1.2 var(--head); letter-spacing: -.02em; }
+.production-notes > summary:hover .display { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .18em; }
+.pn-hint { color: var(--ink-2); font-size: .95rem; }
+.pn-body { padding: .2rem 0 1.6rem; border-top: 1px solid var(--grid); }
+.pn-body .pn-media { margin: 1.4rem 0; max-width: 46rem; }
+.close-details { margin: 1.6rem 0 0; }
+/* Inside the details: the CAD band, the pull quote and the typographic panels, all ruled on white */
+.cad-band { margin: 2rem 0; padding: 1.4rem 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.cad-band h3 { margin: 0 0 1rem; }
+.cad-points { list-style: none; padding: 0; margin: 0 0 1.4rem; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem 1.6rem; }
+.cad-points li { margin: 0; border-top: 1px solid var(--grid); padding-top: .6rem; }
+.cad-k { font-weight: 600; font-size: .8125rem; color: var(--ink); }
+.cad-points p { margin: .3rem 0 0; color: var(--ink-2); }
+.cad-shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+.cad-shot { margin: 0; }
+.cad-shot a { display: block; border: 1px solid var(--ink); }
+.cad-shot img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: left top; }
+.cad-note { color: var(--ink-2); font-size: .875rem; margin: 1rem 0 0; }
+.pull-quote { margin: 2rem 0; padding: 1.3rem 0; max-width: 46rem; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.pull-quote p { font: 700 clamp(1.4rem, 1.1rem + 1.2vw, 2rem)/1.25 var(--head); letter-spacing: -.02em; margin: 0 0 .6rem; color: var(--ink); }
+.pull-quote p::before { content: "\201C" / ""; }
+.pull-quote p::after { content: "\201D" / ""; }
+.pull-quote footer { font: 500 .8125rem/1.5 var(--mono); color: var(--ink-2); }
+.typo-panel { display: grid; grid-template-columns: auto 1fr; gap: .3rem 1rem; align-items: baseline; padding: 1.1rem 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); color: var(--ink-2); font: 600 1.1rem/1.35 var(--head); }
+.typo-panel .display { font: 600 3rem/1 var(--mono); letter-spacing: -.03em; color: var(--ink); }
+.typo-panel.big { grid-template-columns: minmax(0, 1fr); gap: .5rem; }
+.typo-panel.big .display { font-size: clamp(3rem, 2.4rem + 2.4vw, 4.5rem); }
+.typo-panel.list { display: block; margin: 0; }
+.typo-panel.list ul { list-style: none; padding: 0; margin: 0; }
+.typo-panel.list li { margin: 0; padding: .45rem 0; border-top: 1px solid var(--grid); font: 700 clamp(1.3rem, 1.1rem + .8vw, 1.8rem)/1.2 var(--head); letter-spacing: -.02em; color: var(--ink); }
+.typo-panel.list li:first-child { border-top: 0; padding-top: 0; }
+.typo-panel.list figcaption { margin: .8rem 0 0; }
+/* The bento gallery inside the details: one crop for every tile, square frames */
+.bento-gallery { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+.bento-gallery > li { grid-column: span 4; }
+.bento-gallery > .g-12 { grid-column: span 12; }
+.bento-gallery > .g-8 { grid-column: span 8; }
+.bento-gallery > .g-6 { grid-column: span 6; }
+.bento-gallery > .g-4 { grid-column: span 4; }
+.bento-gallery > .g-3 { grid-column: span 3; }
+.bento-gallery > .g-lead { grid-row: span 2; }
+.bento-gallery a.shot, .bento-gallery a.shot.r43, .bento-gallery a.shot.r11, .bento-gallery a.shot.r45, .bento-gallery a.shot.r169 { aspect-ratio: 16 / 10; }
+.bento-gallery > .g-lead a.shot { aspect-ratio: auto; height: calc(100% - 3.5rem); min-height: 16rem; }
+.bento-gallery.n-1 > li { grid-column: 2 / span 10; }
+.bento-gallery.n-1 a.shot { aspect-ratio: auto; max-height: 75vh; }
+.bento-gallery.n-1 a.shot img { object-fit: contain; object-position: center; max-height: 75vh; }
+.bento-gallery a.shot img, .bento-gallery a.shot.r169 img { object-position: left top; }
+
+/* How AI was used: three ruled lines */
+.ai-strip { margin: 2.2rem 0 0; padding-top: 1.4rem; border-top: 1px solid var(--grid); }
+.ai-strip h2 { font-size: 1.5rem; margin: 0 0 .7rem; }
+.ai-lines { margin: 0; border-top: 1px solid var(--ink); }
+.ai-lines div { padding: .65rem 0; border-bottom: 1px solid var(--grid); }
+.ai-lines dt { font: 600 .8125rem/1.6 var(--mono); color: var(--ink); }
+.ai-lines dd { margin: 0; color: var(--ink-2); }
+.ai-more { margin: .6rem 0 0; }
+
+/* Previous and next project */
+.next-prev { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 2.4rem 0 0; border-top: 2px solid var(--ink); }
+.next-prev a { display: block; min-height: 44px; padding: 1rem 1rem 1rem 0; color: var(--ink); text-decoration: none; }
+.next-prev .next { text-align: right; padding: 1rem 0 1rem 1rem; border-left: 1px solid var(--grid); }
+.next-prev span { display: block; font: 500 .8125rem/1.5 var(--mono); color: var(--mute); }
+.next-prev strong { font: 700 1.15rem/1.3 var(--head); letter-spacing: -.01em; }
+.next-prev a:hover strong { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .18em; }
+
+/* ---------- work.html: the status legend and the plain list */
+.status-legend { margin: 1.4rem 0 0; padding: .7rem 0; max-width: 46rem; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); font: 500 .8125rem/1.65 var(--mono); color: var(--ink-2); }
+.plain-list { list-style: none; padding: 0; margin: 0 0 1rem; border-top: 1px solid var(--ink); }
+.plain-list li { margin: 0; padding: .7rem 0; border-bottom: 1px solid var(--grid); }
+.plain-list a { font-weight: 700; }
+.plain-status { font: 500 .8125rem/1.4 var(--mono); color: var(--mute); white-space: nowrap; margin-left: .3rem; }
+
+/* ---------- About: ruled rows for the steps, the log, the habits and the checks */
+.about-sec { margin: 0; padding: 1.8rem 0 2rem; border-bottom: 1px solid var(--grid); }
+.about-sec h2 { font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem); margin: 0 0 .5rem; }
+.about-intro { font-size: 1.0625rem; max-width: 46rem; margin: 0 0 1.2rem; }
+.cue-run { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--ink); }
+.cue-run li { margin: 0; display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); column-gap: .6rem; padding: .75rem 0; border-bottom: 1px solid var(--grid); }
+.cue-q { font: 600 .875rem/1.6 var(--mono); color: var(--mute); grid-row: span 2; }
+.cue-run h3 { font-size: 1.05rem; line-height: 1.4; margin: 0 0 .15rem; }
+.cue-run p { margin: 0; color: var(--ink-2); max-width: 46rem; }
+.made-log { list-style: none; counter-reset: log; padding: 0; margin: 0; max-width: 50rem; border-top: 1px solid var(--ink); }
+.made-log li { counter-increment: log; position: relative; margin: 0; padding: .7rem 0 .7rem 2.8rem; border-bottom: 1px solid var(--grid); }
+.made-log li::before { content: counter(log) / ""; position: absolute; left: 0; top: .7rem; font: 600 .875rem/1.8 var(--mono); color: var(--mute); }
+.made-log .open-item { counter-increment: none; padding-left: 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); margin-top: -1px; }
+.made-log .open-item::before { content: none; }
+.made-log .open-item strong { font: 600 .875rem/1.6 var(--mono); }
+.habit-cards { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--ink); }
+.habit-cards li { margin: 0; padding: 1rem 0; border-bottom: 1px solid var(--grid); }
+.habit-cards h3 { font-size: 1.05rem; line-height: 1.4; margin: 0 0 .3rem; }
+.habit-cards p { margin: 0; color: var(--ink-2); max-width: 46rem; }
+.habit-cards .see-it { margin-top: .5rem; font-size: .9375rem; color: var(--ink); }
+.vet-list { list-style: none; counter-reset: check; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(3, auto); grid-auto-flow: column; gap: 0 2rem; max-width: 60rem; border-top: 1px solid var(--ink); }
+.vet-list li { counter-increment: check; margin: 0; padding: .65rem 0 .65rem 2.2rem; border-bottom: 1px solid var(--grid); position: relative; line-height: 1.6rem; }
+.vet-list li::before { content: counter(check) / ""; position: absolute; left: 0; top: .65rem; font: 600 .875rem/1.6rem var(--mono); color: var(--mute); }
+.vet-example { margin: 1.2rem 0 0; max-width: 46rem; color: var(--ink-2); }

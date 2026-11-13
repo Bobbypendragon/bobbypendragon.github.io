@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; media-src 'self'; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Design competition planner | Rob Nguyen</title>
+<meta name="description" content="One offline HTML file that plans a three-day, 200-person student design competition across five floors, replays every move and suggests tested fixes.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Design competition planner | Rob Nguyen">
+<meta property="og:description" content="One offline HTML file that plans a three-day, 200-person student design competition across five floors, replays every move and suggests tested fixes.">
+<meta property="og:image" content="https://bobbypendragon.github.io/img/social-card.png">
+<meta property="og:image:alt" content="The name Rob Nguyen and the line I catch event problems before the guests do, beside a screenshot of the design competition planner in Demo Hall, a fictional venue.">
+<meta property="og:url" content="https://bobbypendragon.github.io/projects/event-planner.html">
+<link rel="canonical" href="https://bobbypendragon.github.io/projects/event-planner.html">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/site.css">
+<link rel="stylesheet" href="../css/show.css">
+<link rel="stylesheet" href="../css/wide.css" media="(min-width: 900px)">
+<link rel="stylesheet" href="../css/desk.css" media="(min-width: 1024px)">
+<link rel="stylesheet" href="../css/narrow.css" media="(max-width: 760px)">
+<link rel="stylesheet" href="../css/small.css" media="(max-width: 480px)">
+<link rel="stylesheet" href="../css/dark.css" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="../css/show-short.css" media="(max-width: 760px) and (max-height: 700px)">
+<link rel="stylesheet" href="../css/show-tiny.css" media="(max-width: 359px) and (max-height: 600px)">
+<link rel="stylesheet" href="../css/show-flat.css" media="(max-height: 500px)">
+<link rel="stylesheet" href="../css/motion.css" media="(prefers-reduced-motion: reduce)">
+<link rel="stylesheet" href="../css/forced.css" media="(forced-colors: active)">
+<link rel="stylesheet" href="../css/print.css" media="print">
+<link rel="stylesheet" href="../css/show-motion.css" media="(prefers-reduced-motion: no-preference)">
+<link rel="stylesheet" href="../css/show-hover.css" media="(hover: hover) and (prefers-reduced-motion: no-preference)">
+<link rel="stylesheet" href="../css/transitions.css" media="(prefers-reduced-motion: no-preference)">
+<link rel="stylesheet" href="../css/show-vt.css" media="(prefers-reduced-motion: no-preference)">
+<script src="../js/site.js" defer></script>
+<script src="../js/show.js" defer></script>
+</head>
+<body class="show">
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header show-header">
+<div class="wrap">
+<a class="brand" href="../index.html"><svg class="ticket" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path class="tix" d="M5 6 H27 a2 2 0 0 1 2 2 V12 a4 4 0 0 0 0 8 V24 a2 2 0 0 1 -2 2 H5 a2 2 0 0 1 -2 -2 V20 a4 4 0 0 0 0 -8 V8 a2 2 0 0 1 2 -2 Z"/><text class="tix-rn" x="16" y="22.4" text-anchor="middle">RN</text></svg><span>Rob Nguyen</span></a>
+<button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" hidden><span class="menu-icon" aria-hidden="true"></span>Menu</button>
+<nav class="site-nav" id="site-nav" aria-label="Main"><ul><li><a href="../work.html">Projects</a></li><li><a href="../about.html">About</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+</div>
+</header>
+<main id="main" tabindex="-1">
+<div class="wrap show-head"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../work.html">Projects</a></li><li><span aria-current="page">Design competition planner</span></li></ol></nav><header class="show-title"><h1 class="display">Design competition planner</h1><p class="lede">One offline file that replays every move of a 200-person, five-floor event, finds the bottlenecks and suggests fixes it has already tested.</p><p class="meta-line"><span class="status status-in-use"><span class="status-dot" aria-hidden="true"></span>In use by my team</span> <span class="sep" aria-hidden="true">&middot;</span> Oct 2026 <span class="sep" aria-hidden="true">&middot;</span> Product owner, event-domain expert, reviewer</p></header></div><div class="show-hero-wrap"><figure class="show-hero framed vt-event-planner"><a href="../media/event-planner/demo/04-report-stacked-w1600.webp" data-lightbox="hero" data-caption="The read-only report on stacked floors, for briefing people who don&#x27;t know the building. Everything shown is fictional: the building (Demo Hall), the event and the names." data-w="1600" data-h="1000"><img src="../media/event-planner/demo/04-report-stacked-w1600.webp" srcset="../media/event-planner/demo/04-report-stacked-w760.webp 760w, ../media/event-planner/demo/04-report-stacked-w1600.webp 1600w" sizes="(max-width: 960px) 100vw, 960px" alt="The read-only Report on the stacked floors of Demo Hall, a fictional four-level venue: rooms on each floor, people as dots, a lift queue in red on level 1, and a side panel listing who is where and the staff on duty at 16:00." width="1600" height="1000" decoding="async" fetchpriority="high"></a><figcaption>The read-only report on stacked floors, for briefing people who don&#x27;t know the building. Everything shown is fictional: the building (Demo Hall), the event and the names.</figcaption></figure></div><div class="wrap"><section class="glance result-first" aria-labelledby="result-h"><h2 id="result-h">Result</h2><ul class="n-3"><li><strong class="display">200</strong><span>people across five floors</span></li><li><strong class="display">49</strong><span>automated tests, all passing</span></li><li><strong class="display">9</strong><span>room set-up styles</span></li></ul><p class="result-outcome">My team is using the offline planner.</p><p class="result-demo">In the demo, one fix took the slowest move from about 5 to about 4 minutes and the lift queue from 47 to 29.</p></section><section class="beat solo" aria-labelledby="problem-h"><div class="beat-text"><h2 id="problem-h">The problem</h2><p>A three-day student design competition moves about 200 people between five floors. The lifts, the stairs and the staffing decide whether it works, and a spreadsheet can&#x27;t show what a schedule change does further down the day. I built it for a real event at U of T Engineering; every screenshot here uses Demo Hall, a fictional building, and a fictional event.</p></div></section><section class="beat flip" aria-labelledby="built-h"><div class="beat-text"><h2 id="built-h">What I built</h2><p>One offline HTML file with four tabs: Plan, Staff, Simulate and Report. Every step says where everyone is; the app works out the moves, replays them through doors, lifts and stairs, and offers a fix only after simulating that it helps.</p></div><figure class="beat-media beat-video"><video controls preload="none" playsinline poster="../media/event-planner/demo/simulation-frame-20s-poster960.webp" width="1440" height="900" aria-describedby="vid-cap"><source src="../assets/event-planner/demo/simulation.mp4" type="video/mp4"><p>This browser can't play the video. <a href="../assets/event-planner/demo/simulation.mp4">Download the MP4</a> (2.4 MB).</p></video><figcaption id="vid-cap">A 33-second screen recording of the simulation in Demo Hall, a fictional venue, person by person: the climb to the exhibition, the coffee break, the awards and dinner. No sound; 2.4 MB MP4.</figcaption></figure></section><section class="calls" aria-labelledby="calls-h"><h2 id="calls-h">Calls I made</h2><ul class="calls-list"><li><strong>Retired the 3D version.</strong> The three.js version was retired; the stacked 2D view kept what 3D did well.</li><li><strong>Group pain points by cause.</strong> The Simulate tab went from 28 cards to 5.</li><li><strong>Marked every check to confirm with Fire Prevention.</strong> Aisles, clearances and accessible seating are planning checks with editable defaults.</li></ul></section><section class="more-images" aria-labelledby="more-h"><h2 id="more-h">More images</h2><p>Everything shown is fictional: the building (Demo Hall), the event and the names. The screenshots come from a demo plan, never from the real event or the real building.</p>
+<ul class="thumbs"><li><a class="shot" href="../media/event-planner/demo/05-pain-point-fix-result-w1600.webp" data-lightbox="more" data-caption="A grouped pain point after its one-click fix: 70% by the stairs, two stairs open. The slowest move drops from about 5 to about 4 minutes, and the lift queue from 47 to 29." data-w="1600" data-h="1000"><img src="../media/event-planner/demo/05-pain-point-fix-result-thumb520-c0-6-58-64.webp" alt="The Simulate tab after a one-click fix. A green card reads: Tried: 70% by the stairs, two stairs open, with the slowest move down from about 5 to about 4 minutes and the longest lift queue from 47 to 29. Critical and to-watch cards follow, beside the building in section." width="520" height="325" loading="lazy" decoding="async"></a></li><li><a class="shot" href="../media/event-planner/demo/03-section-mid-move-queues-w1600.webp" data-lightbox="more" data-caption="The building in section mid-move, with 140 people heading up to the exhibition and the lift queue building in red." data-w="1600" data-h="1000"><img src="../media/event-planner/demo/03-section-mid-move-queues-thumb520-c31-5-100-74.webp" alt="The Simulate tab with the building in section: four floors of rooms, a lift and stair column with a dotted line of people climbing, and a queue at the lift on the ground floor shown in red." width="520" height="325" loading="lazy" decoding="async"></a></li><li><a class="shot" href="../media/event-planner/demo/07-cad-export-dialog-w1600.webp" data-lightbox="more" data-caption="Exporting to CAD in metres and true orientation, one set of layers per floor, with the event and furniture at the chosen moment." data-w="1600" data-h="1000"><img src="../media/event-planner/demo/07-cad-export-dialog-thumb520-c0-0-100-100.webp" alt="The Export to CAD (DXF) dialog: levels 1 to 4 ticked, orientation options, what to include (head counts, staff posts and walking routes at 16:00, and room set-ups as furniture blocks), and levels stacked at the same coordinates." width="520" height="325" loading="lazy" decoding="async"></a></li><li hidden><a href="../media/event-planner/demo/08-dxf-round-trip-w1600.webp" data-lightbox="more" data-caption="The exported DXF imported again: spaces, lifts, stairs, doors and theatre seating come back exactly where they were." data-w="1600" data-h="1000" data-alt="The exported DXF imported again: the layer table lists accessible seating, AV, doors, furniture, lifts and labels by level, and the level 1 preview shows the rooms with the theatre seating back in place."></a></li><li hidden><a href="../media/event-planner/demo/10-setup-print-diagram-w1600.webp" data-lightbox="more" data-caption="A printable set-up diagram with a scale bar, north arrow, legend and counts of tables, chairs, linens and AV." data-w="1600" data-h="2071" data-alt="A printable set-up diagram for a fictional catering atrium: 18 round tables, a stage, buffet lines and accessible seating, with a north arrow, a 5 m scale bar, a legend and a table of counts for tables, chairs, linens and AV."></a></li><li hidden><a href="../media/event-planner/demo/11-setup-dxf-round-trip-w1600.webp" data-lightbox="more" data-caption="The dinner layout after a round trip through CAD, every table and chair back in place." data-w="1600" data-h="1000" data-alt="The dinner layout after a round trip through CAD: the level 2 preview shows the round tables and chairs in the atrium, back in place."></a></li><li hidden><a href="../media/event-planner/demo/02-imported-floor-plan-w1600.webp" data-lightbox="more" data-caption="The imported second floor at dinner: the CAD linework under the plan, the banquet layout and guests at their tables." data-w="1600" data-h="1000" data-alt="Level 2 of Demo Hall at dinner: the CAD linework under the plan, round banquet tables in the atrium with guests seated, and a dashed walking route from the lifts."></a></li><li hidden><a href="../media/event-planner/demo/06-groups-grid-w1600.webp" data-lightbox="more" data-caption="Jurors, studio teams and guests keep their identity from step to step." data-w="1600" data-h="1000" data-alt="The Groups grid: jurors, three studio team groups and guests, with a table of which room each group is in at every step of the showcase day, beside the building in section."></a></li></ul><p class="see-all-row"><a class="btn-line see-all" href="../media/event-planner/demo/08-dxf-round-trip-w1600.webp" data-lightbox-open="more" data-start="3">See all (8)</a></p></section><details class="production-notes" id="details"><summary><span class="display">Full details</span><span class="pn-hint">How it works, the full feature list, decisions, numbers and next steps</span></summary><div class="prose pn-body"><h3 id="tools">Tools</h3><ul><li>Vanilla JavaScript ES modules (16, no framework)</li><li>SVG</li><li>localStorage and IndexedDB</li><li>claude.ai artifact storage</li><li>Python build and test tools</li><li>OpenStreetMap</li><li>PyMuPDF (to read floor-plan PDFs)</li><li>three.js in the first version</li></ul><section class="cad-band" aria-labelledby="cad-h"><h3 id="cad-h">CAD import and export</h3><ul class="cad-points"><li><span class="mono cad-k">In</span><p>A facilities team&#x27;s DXF files, one per floor or one per building. A layer-mapping dialog turns them into a working floor plan.</p></li><li><span class="mono cad-k">Set-ups</span><p>Nine room set-up styles, laid out to fit each room, with planning checks and keyboard editing.</p></li><li><span class="mono cad-k">Out</span><p>DXF in metres (AutoCAD 2000 format), with layers per floor and furniture as CAD blocks. A round trip comes back within 1 cm.</p></li></ul><div class="cad-shots"><figure class="cad-shot"><a href="../media/event-planner/demo/01-cad-import-layer-mapping-cropped-w1600.webp" data-lightbox="scenes" data-caption="Mapping a building&#x27;s CAD layers (rooms, labels, doors, lifts and stairs), with a live preview of each floor." data-w="1600" data-h="1012"><img src="../media/event-planner/demo/01-cad-import-layer-mapping-cropped-scene900.webp" srcset="../media/event-planner/demo/01-cad-import-layer-mapping-cropped-scene520.webp 520w, ../media/event-planner/demo/01-cad-import-layer-mapping-cropped-scene900.webp 900w" sizes="(max-width: 760px) 100vw, 560px" alt="The New venue from a CAD drawing dialog. A table maps each DXF layer (labels, room outlines, doors, lifts, stairs, walls) to a use, beside a live preview of level 1 of Demo Hall with its rooms, two stairs and two lifts." width="900" height="569" loading="lazy" decoding="async"></a><figcaption>Mapping a building&#x27;s CAD layers (rooms, labels, doors, lifts and stairs), with a live preview of each floor.</figcaption></figure><figure class="cad-shot"><a href="../media/event-planner/demo/09-setup-editor-checks-w1600.webp" data-lightbox="scenes" data-caption="The room set-up editor: banquet rounds, a stage, AV, registration and buffet lines, with the planning checks beside them." data-w="1600" data-h="1000"><img src="../media/event-planner/demo/09-setup-editor-checks-scene900-c5-1-94-81.webp" srcset="../media/event-planner/demo/09-setup-editor-checks-scene520-c5-1-94-81.webp 520w, ../media/event-planner/demo/09-setup-editor-checks-scene900-c5-1-94-81.webp 900w" sizes="(max-width: 760px) 100vw, 560px" alt="The room set-up editor for a fictional catering atrium: banquet rounds, a stage, AV, registration and buffet tables on the plan, beside a column of passed planning checks such as 143 places for 140 people." width="900" height="509" loading="lazy" decoding="async"></a><figcaption>The room set-up editor: banquet rounds, a stage, AV, registration and buffet lines, with the planning checks beside them.</figcaption></figure></div><p class="cad-note">Everything shown is fictional: the building (Demo Hall), the event and the names.</p></section><blockquote class="pull-quote"><p>It looked impressive but answered the planner&#x27;s questions slowly.</p><footer>Why I retired the 3D version.</footer></blockquote><div class="pn-media typo-panel"><span class="display">200</span><span>people</span><span class="display">5</span><span>floors</span><span class="display">3</span><span>days</span></div><h3 id="event">The event</h3>
+<p>The event is a student design competition. The draft plan covers three days (a launch day, a build day and a pitch day) for about 200 people:</p>
+<ul>
+<li>about 165 students in about 36 teams</li>
+<li>12 judges in 4 panels</li>
+<li>guests, organizers and volunteers</li>
+</ul>
+<p>The pitch day runs 4 panels of 9 teams in 13-minute slots, then finalists and awards, across five floors of one campus building.</p>
+
+<h3 id="problem">The problem</h3>
+<p>A multi-floor event lives or dies on the lifts, the stairs and the staffing. Moving 200 people from the auditorium up to the catering space is the bottleneck. A spreadsheet can't show that, or what a schedule change does further down the day.</p>
+
+<h3 id="built">What I built: Plan, Staff, Simulate, Report</h3>
+<figure class="diagram" id="diagram-planner-flow"><svg class="dg-wide" viewBox="0 0 1030 151" width="1030" height="151" aria-hidden="true" focusable="false"><defs><marker id="planner-flow-w-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0,0 L10,5 L0,10 z"/></marker></defs><g class="dg-step"><rect class="dg-box" x="18" y="32" width="214" height="101"/><rect class="dg-num" x="28" y="20" width="24" height="24"/><text class="dg-num-t" x="40" y="37" text-anchor="middle">1</text><text class="dg-t" x="32" y="66">Plan</text><text class="dg-n" x="32" y="91">Steps say where everyone</text><text class="dg-n" x="32" y="108">is; the app works out moves</text></g><path class="dg-arrow" d="M236,82.5 L274,82.5" marker-end="url(#planner-flow-w-head)"/><g class="dg-step"><rect class="dg-box" x="278" y="32" width="214" height="101"/><rect class="dg-num" x="288" y="20" width="24" height="24"/><text class="dg-num-t" x="300" y="37" text-anchor="middle">2</text><text class="dg-t" x="292" y="66">Staff</text><text class="dg-n" x="292" y="91">Posts generated from routes;</text><text class="dg-n" x="292" y="108">shifts and break checks</text></g><path class="dg-arrow" d="M496,82.5 L534,82.5" marker-end="url(#planner-flow-w-head)"/><g class="dg-step k-check"><rect class="dg-box" x="538" y="32" width="214" height="101"/><rect class="dg-num" x="548" y="20" width="24" height="24"/><text class="dg-num-t" x="560" y="37" text-anchor="middle">3</text><text class="dg-t" x="552" y="66">Simulate</text><text class="dg-n" x="552" y="91">Lifts, stairs and doors;</text><text class="dg-n" x="552" y="108">fixes tested before offered</text></g><path class="dg-arrow" d="M756,82.5 L794,82.5" marker-end="url(#planner-flow-w-head)"/><g class="dg-step k-out"><rect class="dg-box" x="798" y="32" width="214" height="101"/><rect class="dg-num" x="808" y="20" width="24" height="24"/><text class="dg-num-t" x="820" y="37" text-anchor="middle">4</text><text class="dg-t" x="812" y="66">Report</text><text class="dg-n" x="812" y="91">Stacked view, projector</text><text class="dg-n" x="812" y="108">mode, exports</text></g></svg><svg class="dg-tall" viewBox="0 0 366 610" width="366" height="610" aria-hidden="true" focusable="false"><defs><marker id="planner-flow-t-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0,0 L10,5 L0,10 z"/></marker></defs><g class="dg-step"><rect class="dg-box" x="18" y="32" width="330" height="110"/><rect class="dg-num" x="28" y="20" width="24" height="24"/><text class="dg-num-t" x="40" y="37" text-anchor="middle">1</text><text class="dg-t" x="32" y="69">Plan</text><text class="dg-n" x="32" y="97">Steps say where everyone</text><text class="dg-n" x="32" y="117">is; the app works out moves</text></g><path class="dg-arrow" d="M183.0,145 L183.0,166" marker-end="url(#planner-flow-t-head)"/><g class="dg-step"><rect class="dg-box" x="18" y="182" width="330" height="110"/><rect class="dg-num" x="28" y="170" width="24" height="24"/><text class="dg-num-t" x="40" y="187" text-anchor="middle">2</text><text class="dg-t" x="32" y="219">Staff</text><text class="dg-n" x="32" y="247">Posts generated from routes;</text><text class="dg-n" x="32" y="267">shifts and break checks</text></g><path class="dg-arrow" d="M183.0,295 L183.0,316" marker-end="url(#planner-flow-t-head)"/><g class="dg-step k-check"><rect class="dg-box" x="18" y="332" width="330" height="110"/><rect class="dg-num" x="28" y="320" width="24" height="24"/><text class="dg-num-t" x="40" y="337" text-anchor="middle">3</text><text class="dg-t" x="32" y="369">Simulate</text><text class="dg-n" x="32" y="397">Lifts, stairs and doors;</text><text class="dg-n" x="32" y="417">fixes tested before offered</text></g><path class="dg-arrow" d="M183.0,445 L183.0,466" marker-end="url(#planner-flow-t-head)"/><g class="dg-step k-out"><rect class="dg-box" x="18" y="482" width="330" height="110"/><rect class="dg-num" x="28" y="470" width="24" height="24"/><text class="dg-num-t" x="40" y="487" text-anchor="middle">4</text><text class="dg-t" x="32" y="519">Report</text><text class="dg-n" x="32" y="547">Stacked view, projector</text><text class="dg-n" x="32" y="567">mode, exports</text></g></svg><div class="sr-only"><p>Design competition planner workflow, step by step:</p><ol><li>Plan: Steps say where everyone is; the app works out moves</li><li>Staff: Posts generated from routes; shifts and break checks</li><li>Simulate: Lifts, stairs and doors; fixes tested before offered</li><li>Report: Stacked view, projector mode, exports</li></ol></div><figcaption>The planner&#x27;s four tabs: plan the day, staff it, simulate it, then report on it.</figcaption></figure>
+<h4>Plan</h4>
+<ul>
+<li>The run of show is a list of steps, each saying "where is everyone". The app works out the moves from the step before.</li>
+<li>Adding a step asks whether to fit it in, push the rest of the day back, or keep the overlap.</li>
+<li>Crew-only steps (load-in, AV check, teardown), and a per-step owner, call time, cues, AV and Plan B.</li>
+<li>Groups (judges, each panel's teams, guests) keep their identity from step to step.</li>
+<li>Spaces and bookings with status and CSV export; catering with the 2-hour food-safety rule; and a checklist filtered by the event's features.</li>
+<li>Floor plans can be traced from an uploaded PDF.</li>
+</ul>
+<h4>Staff</h4>
+<ul>
+<li>Lift, stair and door posts are generated from the routes.</li>
+<li>Shifts are filled in blocks of up to 3 hours.</li>
+<li>Checks catch double bookings and anyone working more than 5 hours without a break (Ontario's Employment Standards Act).</li>
+</ul>
+<h4>Simulate</h4>
+<ul>
+<li>Play the whole event or one day.</li>
+<li>Every assumption is editable: lift cars and size, wait times, stair use, walking speed, and "what if a lift is out of service?".</li>
+<li>Pain points are grouped by cause, for example "9 moves between two floors are slow, held up by the lift queue".</li>
+<li><strong>One-click fixes are simulated first and offered only if they help:</strong> send 70% by the stairs, open a second stair, run two waves 3 minutes apart, lengthen a step, staff a post, or raise a catering order. Each reports its effect (for example "Critical 1 to 0"), and Undo restores the plan exactly.</li>
+</ul>
+<h4>Report and day-of tools</h4>
+<ul>
+<li>A read-only overview with a live run-through, a "Stacked" exploded axonometric view of the floors, a projector mode and print to PDF.</li>
+<li>"Running late +5, +10, +15 or +30" shifts steps, meals, shifts and the cue times inside their text, then lists who to tell and drafts the message. There's also a change log, and a drift check before export.</li>
+<li>Exports built in the browser with no libraries: a 13-sheet day-of schedule workbook (one sheet per day, cues, pitch slots, contingencies, staff schedule, signage), a planning workbook with live formulas, a one-page manager summary and per-volunteer sheets.</li>
+<li><strong>Shared mode (Oct 27):</strong> published as a claude.ai artifact, the same file becomes a shared plan. It autosaves and syncs about every 15 seconds, waits while someone is typing, merges simultaneous edits three ways and reads every save back to catch races. Opened from disk, it still works offline.</li>
+</ul>
+
+<h3 id="cad">CAD import and export</h3>
+<p>The planner now works from a building's own CAD drawings. It takes the DXF files a facilities team already keeps, one per floor or one for the whole building, and a layer-mapping dialog turns room outlines, labels, doors, lifts and stairs into a working floor plan. It reads the drawing's units, previews every floor live and lines drawings up with two points. Any building can become the venue, with the crowd simulation, staffing and reports running in it.</p>
+<p><strong>Room set-ups.</strong> For each space and session, the planner lays out the room in one of nine set-up styles, among them theatre rows, classroom tables, banquet rounds, a boardroom, a U-shape and a reception, with a stage, AV, registration, buffet lines and accessible seating. It keeps doors and walls clear, splits rows with aisles and reports the seats against the head count, which feeds the capacity checks. Items can be moved, turned or removed by mouse or keyboard, with undo.</p>
+<p>Aisles, clearances and accessible seating are planning checks with editable defaults, each marked to confirm with Fire Prevention, and every capacity says where it comes from.</p>
+<p><strong>Back to CAD.</strong> The plan goes back out as a DXF in AutoCAD 2000 format, in metres and in true orientation, with one set of layers per floor and the event's head counts, staff posts, routes and furniture, ready to overlay on facilities drawings. Furniture travels as CAD blocks, and importing the file again brings everything back within 1 cm. Set-ups also print as scaled diagrams and become a rentals list for caterers and rental companies. It's still one offline HTML file, and the drawings never leave the computer.</p>
+<p>Everything shown is fictional: the building (Demo Hall), the event and the names.</p>
+<h4 id="why-dxf">Why the planner reads DXF instead of driving AutoCAD</h4>
+<p>I evaluated Autocad-MCP, an open-source server (MIT licence) that lets Claude draw and edit DWG and DXF drawings, either by controlling AutoCAD or headless with the ezdxf library. It's capable, but it wasn't the right fit here:</p>
+<ul>
+<li><strong>How the planner runs.</strong> The planner is one offline web page. An MCP server runs beside Claude, not inside a page, so the planner couldn't use it.</li>
+<li><strong>Licences.</strong> Its live features need a desktop AutoCAD licence.</li>
+<li><strong>Permissions.</strong> Its defaults (file access across the user folder, and a raw command and AutoLISP escape hatch) would need locking down, and an IT review, on a university computer.</li>
+</ul>
+<p>So the planner reads and writes DXF itself, and DWG files are converted to DXF with free tools first. A possible later use: a sandboxed, separate step that turns the planner's DXF export into a plotted drawing with a title block and dimensions. The six checks I use are on the <a href="../about.html#vet-ai">About</a> page.</p>
+
+<h3 id="how">How it works</h3>
+<ul>
+<li><strong>Crowd model:</strong> door and stair flow rates from the SFPE engineering handbook; lift traffic from industry practice (2 cars of 10 people); a walking speed of 1.2 m/s, with slower lift-only riders boarding first. It's labelled "a planning estimate, not an evacuation analysis".</li>
+<li><strong>Building model:</strong> floors measured from university floor plans to about &plusmn;0.3 m, floor heights from a City of Toronto by-law, and the surroundings converted from OpenStreetMap.</li>
+<li><strong>Build:</strong> a Python script bundles the 16 modules into one file, and refuses to build on name clashes or leftover imports.</li>
+<li><strong>Secure by default:</strong> the interface is never built from HTML strings, and no text is ever run as code.</li>
+</ul>
+
+<h3 id="decisions">Key decisions</h3>
+<ol>
+<li><strong>3D was retired for 2D.</strong> The three.js version "looked impressive but answered the planner's questions slowly": labels lined up with the wrong floor, it needed camera work, and it needed the internet. The 2D version works offline, and the Report's stacked view keeps the one thing 3D did well.</li>
+<li><strong>Steps hold head counts, and the app derives the moves.</strong> A wrong guess in a hand-written move had caused a critical error two hours later in the plan.</li>
+<li><strong>Every capacity is labelled with its source,</strong> and a room near capacity on an unconfirmed estimate counts as critical.</li>
+<li><strong>Group pain points by cause.</strong> This took the Simulate tab from 28 cards to 5.</li>
+<li><strong>Two workbooks,</strong> one for the day and one for planning. All three planner reviewers asked for it.</li>
+<li><strong>Safety rules.</strong> 911 always comes first, there are no phone-number fields, and staff are placeholders.</li>
+</ol>
+
+<h4>Six review rounds in a week</h4>
+<p>The reviewers were AI personas, not real users: structured AI review panels. I decided what to act on.</p>
+<div class="table-wrap" role="region" aria-label="Review rounds" tabindex="0">
+<table>
+<thead><tr><th scope="col">Date (2026)</th><th scope="col">Round</th></tr></thead>
+<tbody>
+<tr><th scope="row">Oct 21 to 22</th><td>Research, the 3D three.js planner, a first event brief and a static day-of schedule workbook.</td></tr>
+<tr><th scope="row">Oct 22</th><td><strong>Round 1</strong>, a task walkthrough (20 findings). <strong>Round 2</strong>, the 2D rebuild: fully offline, 468 KB.</td></tr>
+<tr><th scope="row">Oct 23</th><td><strong>Round 3</strong>, a quality pass: design and accessibility research, event-rules research and a code review (16 bugs). A colour-blind-safe palette, realistic lift figures, and labour and food-safety checks.</td></tr>
+<tr><th scope="row">Oct 24</th><td><strong>Round 4</strong>, UI, code and event-producer reviewers who then debated each other: per-step owner, cue and Plan B fields; print-ready sheets; the first 17 tests.</td></tr>
+<tr><th scope="row">Oct 25</th><td>Floors measured from floor plans. <strong>Round 5</strong>, three planner personas (a coordinator, a competition director, a venue and risk lead) scored it 4 out of 10, then 6.5, 6.5 and 7. <strong>Round 6</strong>, five specialists (visual, accessibility, QA, JavaScript, plain language), with about 50 wording changes.</td></tr>
+<tr><th scope="row">Oct 27</th><td>Shared online mode.</td></tr>
+<tr><th scope="row">Oct 29</th><td>A publishing handoff, and a brief for a lighter companion "shared planning board".</td></tr>
+</tbody>
+</table>
+</div>
+
+<h4>Testing</h4>
+<ul>
+<li>49 automated tests, all passing (34 before the CAD and set-up work). The original 34 run in headless Edge and cover plan cleaning and hostile input, crowd-model invariants (more lift cars are never slower), staffing, the spreadsheet writer, pinned timings, and merge and race cases.</li>
+<li>Browser checks at 1366 by 768, 1920 by 1080, 800 px and 320 px wide, and at 130 to 150% text size.</li>
+<li>Not done yet: opening the exports in real Excel, printing on paper, and testing on claude.ai itself.</li>
+</ul>
+
+<h3 id="results">Results and status</h3>
+<ul>
+<li>The offline planner is complete and tested. The online version is built but not published.</li>
+<li>The companion board is briefed, not built.</li>
+<li>I'm waiting on Facilities and Fire Prevention for lift, door and stair facts. The draft plan's own simulation shows 7 critical items to resolve.</li>
+<li>The planner file itself isn't posted here: its building model comes from floor plans that aren't for distribution.</li>
+</ul>
+<div class="table-wrap" role="region" aria-label="The planner in numbers" tabindex="0">
+<table>
+<caption>In numbers</caption>
+<tbody>
+<tr><th scope="row">Code</th><td>About 9,050 lines of JavaScript in 16 modules; <code>app.js</code> alone is 5,044 lines</td></tr>
+<tr><th scope="row">Testing</th><td>49 tests (34 before the CAD work); 6 review rounds with about 17 reviewer personas</td></tr>
+<tr><th scope="row">Round 1, before and after</th><td>Simulate went from 28 cards and 8,800 px to 5 cards and 2,000 px; Catering from 4,700 px to 855 px</td></tr>
+<tr><th scope="row">Accessibility</th><td>Focus-ring contrast went from 1.34:1 to 11.7:1. The closest pair of role colours went from a &Delta;E of 4.7 to at least 10.9 under colour-blindness simulation.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 id="next">What I'd do next</h3>
+<ul>
+<li>Get the lift, door and stair facts confirmed, then resolve the 7 critical items.</li>
+<li>Build the companion shared planning board.</li>
+<li>Open the exports in real Excel, print them, and test the shared mode on claude.ai.</li>
+</ul>
+
+<p class="close-details"><a href="#details">Close details</a></p></div></details><aside class="ai-strip" aria-labelledby="ai-h"><h2 id="ai-h">How AI was used</h2><dl class="ai-lines"><div><dt>Claude did:</dt><dd>Much of the code and the tests.</dd></div><div><dt>I decided:</dt><dd>What to act on from six rounds of AI review panels, as the product owner and event-domain expert, and to read CAD files instead of driving AutoCAD.</dd></div><div><dt>How it was checked:</dt><dd>49 automated tests, all passing, including crowd-model checks such as more lift cars never being slower, and browser checks from 320 px to 1920 by 1080.</dd></div></dl><p class="ai-more"><a href="../about.html#how-i-work">How I work with Claude</a></p></aside><nav class="next-prev" aria-label="Previous and next project"><a href="../work.html"><span>Back to</span><strong>All projects</strong></a><a class="next" href="event-operations.html"><span>Next project</span><strong>Event operations: catering, tent cards and nametags</strong></a></nav></div>
+</main>
+<footer class="site-footer stage-footer">
+<div class="wrap">
+<section class="footer-contact" id="contact" aria-labelledby="contact-h"><h2 id="contact-h">Get in touch</h2><p class="footer-contact-text">Happy to talk about any of this work.</p><ul class="hire-buttons"><li><a class="btn-stage" href="mailto:robert.ad.nguyen@gmail.com">Email me</a></li><li><a class="btn-line" href="https://www.linkedin.com/in/robert-ad-nguyen/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li></ul></section>
+<p class="footer-sign"><span class="wordmark">Rob Nguyen</span> ISTEP, U of T Engineering</p>
+<p>A personal portfolio, not an official University of Toronto site. Names and marks in work samples belong to their owners. <a href="../credits.html">Credits and trademarks</a>.</p>
+<p>No cookies, no tracking and no outside requests.</p>
+</div>
+</footer>
+</body>
+</html>

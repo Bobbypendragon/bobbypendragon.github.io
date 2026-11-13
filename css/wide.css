@@ -1,0 +1,11 @@
+/* Loaded with media="(min-width: 900px)" from every page. */
+.intro-cols { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+.stage-inner { grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); gap: 2.2rem; }
+.ai-lines div { display: grid; grid-template-columns: 11rem minmax(0, 1fr); column-gap: 1.2rem; }
+/* About: each step and habit on one ruled line (number, title, text) */
+.cue-run li { grid-template-columns: 2.2rem minmax(0, 11rem) minmax(0, 1fr); column-gap: 1rem; align-items: baseline; }
+.cue-q { grid-row: auto; }
+.cue-run h3 { margin: 0; }
+.habit-cards li { display: grid; grid-template-columns: minmax(0, 14rem) minmax(0, 1fr); column-gap: 1.6rem; }
+.habit-cards h3 { grid-row: span 2; margin: 0; }
+.habit-cards li > p { grid-column: 2; }

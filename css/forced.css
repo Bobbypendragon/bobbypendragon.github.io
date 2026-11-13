@@ -1,0 +1,4 @@
+/* Loaded with media="(forced-colors: active)" (Windows contrast themes): the gold highlighter becomes a plain
+   underline, and the "In use" dot keeps a system colour so it stays visible. */
+.mark { background: none; color: CanvasText; text-decoration: underline; text-decoration-thickness: .08em; text-underline-offset: .12em; }
+.status-dot { forced-color-adjust: none; background: CanvasText; }

@@ -1,0 +1,9 @@
+/* Loaded with media="print" from every page. Black on white, no navigation, and the highlighter as an
+   underline (never a solid gold block). */
+.site-header nav, .menu-toggle, .skip-link, .btn-row, .next-prev, .docbar, .hire-buttons, .see-all-row, .close-details { display: none !important; }
+body { background: #fff; color: #000; }
+a { color: #000; }
+.site-header { position: static; }
+.mark { background: none !important; color: #000; text-decoration: underline; text-decoration-thickness: .06em; text-underline-offset: .12em; }
+.btn-stage { background: none !important; }
+.production-notes > summary::after { content: none; }

@@ -1,0 +1,17 @@
+/* Loaded with media="(min-width: 1024px)" from every page.
+   The run sheet's left label column on home and About (a muted mono label, the content to its right), the
+   document bar on the same columns, and the wide diagrams (their type is 12 px or more from here up). */
+.page-home .row-grid, .page-about .about-sec { display: grid; grid-template-columns: var(--label-w) minmax(0, 1fr); column-gap: 2rem; }
+.page-home .row-grid > .row-label, .page-about .about-sec > .row-label { grid-column: 1; margin: 0; padding-top: .5rem; }
+.page-home .row-grid > .row-body, .page-about .about-sec > .row-body { grid-column: 2; }
+.page-home .show-intro .row-grid > .row-label { padding-top: 1rem; }
+.page-home .stage-panel .row-grid > .row-label { padding-top: .2rem; }
+.page-home .program .row-grid > .row-label { padding-top: 1.25rem; }
+.docbar-inner { display: grid; grid-template-columns: var(--label-w) minmax(0, 1fr) auto; column-gap: 2rem; }
+.page-about .project-head { display: grid; grid-template-columns: var(--label-w) minmax(0, 1fr); column-gap: 2rem; }
+.page-about .project-head > .eyebrow { grid-column: 1; grid-row: 1 / span 2; margin: 0; padding-top: .9rem; }
+.page-about .project-head > h1 { grid-column: 2; grid-row: 1; }
+.page-about .project-head > .lede { grid-column: 2; grid-row: 2; }
+.diagram .dg-wide { display: block; }
+.diagram .dg-tall { display: none; }
+.typo-hero-diagram { display: block; }

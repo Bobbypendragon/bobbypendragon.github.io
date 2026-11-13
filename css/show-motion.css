@@ -1,0 +1,3 @@
+/* Loaded with media="(prefers-reduced-motion: no-preference)": colour fades on the lightbox buttons only.
+   No lifts and no movement (the card lifts and cue lights are retired). */
+.lb-buttons button, .lb-buttons a { transition: background-color .15s ease, color .15s ease; }

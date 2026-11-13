@@ -1,0 +1,22 @@
+/* Loaded with media="(max-width: 760px) and (max-height: 700px)": shorter phones (375 x 667 and smaller).
+   Tighter type and spacing on the home page, and the featured project's button comes right after its line
+   (the three numbers follow it), so "See how it works" stays in the first screen. */
+.docbar-inner { padding: .3rem 0; }
+.show-intro .row-grid { padding: .6rem 0 1rem; }
+.show-intro h1 { font-size: clamp(1.55rem, .9rem + 4vw, 2rem); line-height: 1.08; margin-bottom: .5rem; }
+.intro-cols { gap: .55rem; }
+.intro-lede { font-size: .9375rem; line-height: 1.45; }
+.intro-ai-short { font-size: .875rem; line-height: 1.45; padding-top: .35rem; }
+.stage-panel .row-grid { padding-top: .75rem; }
+/* One flex column for the featured row: "Featured" and the status share the first line, and the button comes
+   right after the line (the three numbers and the recording follow it). The wrappers are layout-only divs. */
+.stage-panel .row-body, .stage-panel .stage-inner, .stage-panel .stage-copy { display: contents; }
+.stage-panel .row-grid { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 1rem; }
+.stage-panel .row-label { margin: 0; }
+.stage-status { margin: 0 0 .2rem; }
+.stage-title, .stage-line, .stage-cta, .stage-stats, .stage-media { flex: 1 1 100%; }
+.stage-title { font-size: clamp(1.3rem, .9rem + 2.4vw, 1.6rem); margin-bottom: .35rem; }
+.stage-line { font-size: .9375rem; line-height: 1.45; margin-bottom: .7rem; }
+.stage-cta { order: 1; }
+.stage-stats { order: 2; margin: 1rem 0 0; }
+.stage-media { order: 3; margin-top: 1.4rem; }

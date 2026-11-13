@@ -1,0 +1,12 @@
+/* Loaded with media="(prefers-color-scheme: dark)" from every page: the same run sheet, lights down.
+   Gold and the ink on gold (#1C2130) stay the same in both modes. */
+:root {
+  --paper: #14171F;
+  --ink: #ECEEF2;
+  --ink-2: #B4BAC6;
+  --mute: #9AA1AE;
+  --grid: #2A2F3A;
+  --go: #4CC47F;
+}
+/* On dark paper, ink-on-gold must sit wholly on the band, so the highlighter covers the full height of the type. */
+.mark { color: var(--on-gold); background: linear-gradient(177deg, transparent 0 3%, var(--gold) 5% 95%, transparent 97%); }

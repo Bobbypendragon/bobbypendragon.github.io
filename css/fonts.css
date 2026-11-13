@@ -1,0 +1,6 @@
+/* The site's only font files: SIL OFL fonts extracted from Rob's own video compositions
+   (see fonts/OFL.txt). This is the one file where the checker allows the font-face at-rule.
+   Inter sets the headings. Anton is kept only for the "RN" on the ticket logo: fontTools isn't installed for
+   either Python, so its two letters couldn't be converted to outlines. Labels and body text use the device's fonts. */
+@font-face { font-family: "Anton"; src: url("../fonts/anton-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("../fonts/inter-600-800.woff2") format("woff2"); font-weight: 600 800; font-style: normal; font-display: swap; }

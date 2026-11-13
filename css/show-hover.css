@@ -1,0 +1,4 @@
+/* Loaded with media="(hover: hover) and (prefers-reduced-motion: no-preference)": one subtle hover, only on
+   devices with a real pointer. The picture dims a little while its title underlines (site.css, show.css). */
+.pcard-media img, .thumbs a.shot img, .gallery a.shot img { transition: opacity .15s ease; }
+.pcard-link:hover .pcard-media img, .thumbs a.shot:hover img, .gallery a.shot:hover img { opacity: .88; }

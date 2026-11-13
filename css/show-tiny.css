@@ -1,0 +1,7 @@
+/* Loaded with media="(max-width: 359px) and (max-height: 600px)": the smallest phones (320 x 568).
+   Smaller type in the intro and the featured project, so "See how it works" stays in the first screen. */
+.show-intro h1 { font-size: 1.5rem; }
+.intro-lede { font-size: .875rem; line-height: 1.4; }
+.intro-ai-short { font-size: .8125rem; }
+.stage-title { font-size: 1.3rem; }
+.stage-line { font-size: .875rem; line-height: 1.4; }

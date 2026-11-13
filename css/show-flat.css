@@ -1,0 +1,11 @@
+/* Loaded with media="(max-height: 500px)": phones held sideways (812 x 375) and other short windows.
+   The header scrolls away instead of staying pinned, and the intro tightens, so the featured project starts
+   close to the first screen. */
+.site-header { position: static; }
+html { scroll-padding-top: 0; }
+.site-header .wrap { padding: .3rem 0; }
+.show-intro .row-grid { padding: .5rem 0 .8rem; }
+.show-intro h1 { font-size: 2rem; margin: 0 0 .4rem; }
+.intro-lede { font-size: 1rem; }
+.intro-ai-short { font-size: .9375rem; }
+.page-top .project-head { padding: 1rem 0; }
