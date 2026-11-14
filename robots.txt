@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bobbypendragon.github.io/sitemap.xml
+Sitemap: https://robnguyen.ca/sitemap.xml
