@@ -1,6 +1,6 @@
 /* Loaded with media="print" from every page. Black on white, no navigation, and the highlighter as an
    underline (never a solid gold block). */
-.site-header nav, .menu-toggle, .skip-link, .btn-row, .next-prev, .docbar, .hire-buttons, .see-all-row, .close-details { display: none !important; }
+.site-header nav, .menu-toggle, .theme-toggle, .skip-link, .btn-row, .next-prev, .docbar, .hire-buttons, .see-all-row, .close-details { display: none !important; }
 body { background: #fff; color: #000; }
 a { color: #000; }
 .site-header { position: static; }

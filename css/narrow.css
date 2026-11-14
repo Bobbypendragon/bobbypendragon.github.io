@@ -9,7 +9,7 @@ html { scroll-padding-top: 0; }
 /* Phone menu: one line of header, the links in a ruled panel under it (show.js adds .has-menu) */
 .site-header.has-menu { position: relative; }
 .site-header.has-menu .wrap { flex-wrap: nowrap; padding: .4rem 0; column-gap: .5rem; }
-.has-menu .menu-toggle { display: inline-flex; }
+.has-menu .menu-toggle { display: inline-flex; margin-left: auto; }
 .has-menu .site-nav { display: none; }
 .has-menu.menu-open .site-nav { display: block; position: absolute; left: 0; right: 0; top: 100%; z-index: 30; background: var(--paper); border-bottom: 1px solid var(--ink); padding: 0 1.125rem .4rem; }
 .has-menu.menu-open .site-nav ul { flex-direction: column; gap: 0; }
