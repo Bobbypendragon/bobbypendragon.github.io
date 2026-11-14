@@ -16,8 +16,9 @@
   --go: #1E7A45;       /* the "In use" status dot only */
   --wrap: 72rem;
   --label-w: 9.5rem;   /* the left label column (desk.css) */
-  --mono: ui-monospace, "Cascadia Mono", "Cascadia Code", Consolas, "SF Mono", Menlo, monospace;
-  --sans: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: "Inter", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;  /* labels: Inter too, one font site-wide */
+  --code: ui-monospace, "Cascadia Mono", "Cascadia Code", Consolas, "SF Mono", Menlo, monospace;
+  --sans: "Inter", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --head: "Inter", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color-scheme: light dark;
 }
@@ -45,7 +46,7 @@ li > ul, li > ol { margin: .25rem 0 .5rem; }
 a { color: var(--ink); text-decoration: underline; text-decoration-thickness: .07em; text-underline-offset: .2em; }
 a:hover { text-decoration-thickness: .18em; }
 strong { font-weight: 700; }
-code { font-family: var(--mono); font-size: .9em; }
+code { font-family: var(--code); font-size: .9em; }
 hr { border: 0; border-top: 1px solid var(--grid); margin: 2.5rem 0; }
 figcaption { font: 500 .8125rem/1.55 var(--mono); color: var(--ink-2); margin-top: .5rem; }
 
