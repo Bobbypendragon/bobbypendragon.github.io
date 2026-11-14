@@ -9,3 +9,5 @@
 .habit-cards li { display: grid; grid-template-columns: minmax(0, 14rem) minmax(0, 1fr); column-gap: 1.6rem; }
 .habit-cards h3 { grid-row: span 2; margin: 0; }
 .habit-cards li > p { grid-column: 2; }
+/* The light/dark switch fills on hover only on wide screens, so a tap on a phone does not leave it filled. */
+.theme-toggle:hover { background: var(--ink); color: var(--paper); }

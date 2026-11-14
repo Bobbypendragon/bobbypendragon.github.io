@@ -87,7 +87,6 @@ main:focus { outline: none; }
 .site-nav { margin-left: auto; }
 .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 2px solid var(--ink); border-radius: 0; background: var(--paper); color: var(--ink); cursor: pointer; }
 .theme-toggle[hidden] { display: none; }
-@media (hover: hover) { .theme-toggle:hover { background: var(--ink); color: var(--paper); } }
 .theme-toggle svg { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .theme-toggle .ico-sun, [data-mode="dark"] .theme-toggle .ico-moon { display: none; }
 [data-mode="dark"] .theme-toggle .ico-sun { display: block; }
