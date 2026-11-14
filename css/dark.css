@@ -1,11 +1,11 @@
 /* Loaded with media="(prefers-color-scheme: dark)" from every page: the same run sheet, lights down.
-   Gold and the ink on gold (#1C2130) stay the same in both modes. */
+   Sky and the navy on sky (#0B2440) stay the same in both modes. */
 :root {
-  --paper: #14171F;
-  --ink: #ECEEF2;
-  --ink-2: #B4BAC6;
-  --mute: #9AA1AE;
-  --grid: #2A2F3A;
+  --paper: #0E1726;
+  --ink: #E8EEF7;
+  --ink-2: #B3C0D3;
+  --mute: #93A3BA;
+  --grid: #22314A;
   --go: #4CC47F;
 }
 /* On dark paper, ink-on-gold must sit wholly on the band, so the highlighter covers the full height of the type. */

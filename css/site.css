@@ -7,12 +7,12 @@
 
 :root {
   --paper: #FFFFFF;
-  --ink: #1C2130;      /* text and rules */
-  --ink-2: #4A5060;    /* secondary text */
-  --mute: #6B7180;     /* small labels */
-  --grid: #D9DCE2;     /* decorative grid lines only, never text */
-  --gold: #F2B33D;     /* the only accent: the home H1 highlighter and the primary button */
-  --on-gold: #1C2130;  /* text on gold, in both modes */
+  --ink: #13233D;      /* text and rules */
+  --ink-2: #3E4C63;    /* secondary text */
+  --mute: #5E6B80;     /* small labels */
+  --grid: #D6DEE9;     /* decorative grid lines only, never text */
+  --gold: #8CCBFA;     /* sky: the only accent, the home H1 highlighter and the primary button */
+  --on-gold: #0B2440;  /* text on gold, in both modes */
   --go: #1E7A45;       /* the "In use" status dot only */
   --wrap: 72rem;
   --label-w: 9.5rem;   /* the left label column (desk.css) */
@@ -77,8 +77,8 @@ main:focus { outline: none; }
 .brand svg.ticket { width: 42px; height: 42px; flex: none; }
 .brand span { white-space: nowrap; } /* "Rob Nguyen" stays on one line beside the ticket, even at 320 px */
 /* The ticket logo: fixed colours, the same in light and dark. Anton is loaded for these two letters only. */
-.ticket .tix { fill: #F2B33D; }
-.ticket .tix-rn { fill: #1C2130; font-family: "Anton", Impact, "Arial Narrow", sans-serif; font-size: 13px; letter-spacing: .6px; }
+.ticket .tix { fill: #8CCBFA; }
+.ticket .tix-rn { fill: #0B2440; font-family: "Anton", Impact, "Arial Narrow", sans-serif; font-size: 13px; letter-spacing: .6px; }
 .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0 .2rem; }
 .site-nav li { margin: 0; }
 .site-nav a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 0 .7rem; color: var(--ink); text-decoration: none; font: 600 .9375rem/1 var(--mono); }
@@ -172,18 +172,18 @@ td.num, th.num { text-align: right; white-space: nowrap; }
 .videos figcaption strong { color: var(--ink); display: block; }
 
 /* ---------- Lightbox (built by site.js): ink panel, white type, square buttons, gold focus */
-dialog.lightbox { width: min(96vw, 1700px); max-height: 94vh; padding: 0; border: 1px solid #ECEEF2; border-radius: 0; background: #1C2130; color: #FFFFFF; }
-dialog.lightbox::backdrop { background: rgba(12, 14, 20, .84); }
-.lb-bar { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: .5rem; flex-wrap: wrap; padding: .5rem .8rem; background: #1C2130; border-bottom: 1px solid #6B7180; }
-.lb-count { margin: 0; font: 500 .8125rem/1.4 var(--mono); color: #ECEEF2; }
+dialog.lightbox { width: min(96vw, 1700px); max-height: 94vh; padding: 0; border: 1px solid #E8EEF7; border-radius: 0; background: #0E1726; color: #FFFFFF; }
+dialog.lightbox::backdrop { background: rgba(8, 14, 26, .86); }
+.lb-bar { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: .5rem; flex-wrap: wrap; padding: .5rem .8rem; background: #0E1726; border-bottom: 1px solid #5E6B80; }
+.lb-count { margin: 0; font: 500 .8125rem/1.4 var(--mono); color: #E8EEF7; }
 .lb-buttons { display: flex; gap: .4rem; flex-wrap: wrap; }
 .lb-buttons button, .lb-buttons a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 0 .9rem; border: 2px solid #FFFFFF; border-radius: 0; background: transparent; color: #FFFFFF; font: 600 .875rem/1 var(--mono); cursor: pointer; text-decoration: none; }
-.lb-buttons button:hover, .lb-buttons a:hover { background: #FFFFFF; color: #1C2130; }
+.lb-buttons button:hover, .lb-buttons a:hover { background: #FFFFFF; color: #0E1726; }
 .lb-buttons [hidden] { display: none; }
-dialog.lightbox :focus-visible { outline: 3px solid #F2B33D; outline-offset: 2px; }
+dialog.lightbox :focus-visible { outline: 3px solid #8CCBFA; outline-offset: 2px; }
 .lb-figure { margin: 0; padding: .8rem; }
 .lb-figure img { margin: 0 auto; max-width: 100%; height: auto; touch-action: pan-y pinch-zoom; } /* swipes go to the script; pinch-zoom stays with the browser */
-.lb-figure figcaption { max-width: 60rem; margin: .7rem auto 0; font: 400 .95rem/1.5 var(--sans); color: #ECEEF2; }
+.lb-figure figcaption { max-width: 60rem; margin: .7rem auto 0; font: 400 .95rem/1.5 var(--sans); color: #E8EEF7; }
 
 /* ---------- Diagrams (inline SVG): ink, muted, grid and gold only, square corners.
    The tall layout shows by default (and always in two-column sections); desk.css shows the wide one from 1024 px. */
